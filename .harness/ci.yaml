@@ -1,0 +1,38 @@
+pipeline:
+  name: EKS-pipeline
+  identifier: EKSpipeline
+  projectIdentifier: ekspipeline
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github
+        repoName: eks-pipeline
+        build: <+input>
+  stages:
+    - stage:
+        name: Ci Image Build
+        identifier: Ci_Image_Build
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+            override: true
+          buildIntelligence:
+            enabled: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec: {}
