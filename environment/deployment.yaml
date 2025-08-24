@@ -2,15 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: node-app-deployment
-  namespace: appNode
-  labels: { app: appNode }
+  namespace: appnode
+  labels: { app: appnode }
 spec:
   replicas: 2
   selector:
-    matchLabels: { app: appNode }
+    matchLabels: { app: appnode }
   template:
     metadata:
-      labels: { app: appNode }
+      labels: { app: appnode }
     spec:
       securityContext:
         runAsNonRoot: true

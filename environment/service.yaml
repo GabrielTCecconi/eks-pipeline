@@ -2,11 +2,11 @@ apiVersion: v1
 kind: Service
 metadata:
   name: node-app-service
-  namespace: appNode
-  labels: { app: appNode }
+  namespace: appnode
+  labels: { app: appnode }
 spec:
   type: ClusterIP
-  selector: { app: appNode }
+  selector: { app: appnode }
   ports:
     - name: http
       port: 80
