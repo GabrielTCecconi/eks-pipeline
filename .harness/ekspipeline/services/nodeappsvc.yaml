@@ -1,0 +1,9 @@
+service:
+  name: node-app-svc
+  identifier: nodeappsvc
+  serviceDefinition:
+    type: Kubernetes
+    spec: {}
+  gitOpsEnabled: true
+  orgIdentifier: default
+  projectIdentifier: ekspipeline
