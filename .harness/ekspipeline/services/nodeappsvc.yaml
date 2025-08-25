@@ -1,9 +1,0 @@
-service:
-  name: node-app
-  identifier: nodeapp
-  serviceDefinition:
-    type: Kubernetes
-    spec: {}
-  gitOpsEnabled: true
-  orgIdentifier: default
-  projectIdentifier: ekspipeline
